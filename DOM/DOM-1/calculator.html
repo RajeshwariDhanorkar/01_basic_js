@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+    h1{
+color: teal;
+text-align: center;
+
+    }
+    #container{
+        height: 500px;
+        width: 400px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin: auto;
+        margin-top: 50px;
+        padding: 20px 0px;
+        border-radius: 40px;
+    }
+    #display{
+          height:10%;
+          width:90%;
+          
+          margin:auto;
+          margin-top:40px; 
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+          border-radius: 20px;    
+        }
+    #keyboard{
+        height:350px;
+        width: 90%;
+        
+        margin: auto;
+        margin-top: 20px;
+        display:grid ;
+        grid-template-columns:repeat(4,1fr);
+        grid-template-rows: (4,80px);
+        gap:20px;
+        }
+    #keyboard>div{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+        font-size: 25px;
+        font-weight: bold;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border-radius:20%;
+    }
+    #rd{
+        background-color: red;
+        color: white;
+    }
+    .black{
+        background-color: black;
+        color: white;
+    }
+    #display{
+        font-size: 30px;
+        text-align: center;
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div id="container">
+        <div id="display"></div>
+        <div id="keyboard">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div class="black">+</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div class="black">-</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div class="black">*</div>
+            <div id="rd">c</div>
+            <div>0</div>
+            <div class="black">=</div>
+            <div class="black">/</div>
+
+
+
+        </div>
+          
+    </div>
+      
+</body>
+</html>
+<script>
+    let keys = document.querySelectorAll("#keyboard>div")
+    console.log(keys)
+
+    for(let i=0;i<keys.length;i++){
+        keys[i].addEventListener("click",mycall)
+    }
+    let bag ="";
+
+    function mycall(){
+        let targetn = event.target.innerText;
+        if(targetn=="c"){
+
+            //clear the display 
+         document.querySelector("#display").innerText="";
+         bag=""; 
+
+        }
+        else if(targetn == "="){
+            //do mathematical operation
+            let res = eval(bag)
+            document.querySelector("#display").innerText = res;
+         } 
+        else{
+         bag=bag+ targetn;
+        document.querySelector("#display").innerText=bag;
+    }
+}
+     
+    
+
+</script>

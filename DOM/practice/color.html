@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // let color=["red",
+    // "green",
+    // "yellow",
+    // "pink",
+    // "white",
+    // "black",
+    // "gray",
+    // "blue",
+    // " orange",
+    // ];
+    // let names=["uma",
+    // "shubham",
+    // "sonu",
+    // "devi",
+    // "gotam",
+    // "Sushant",
+    // "rachi",
+    // "dhiti",
+    // "somesh",
+    // "krishna",
+    // "sujain",
+    //  ];
+    //or
+    let objData = [
+        { color: "red", name: "uma"},
+        { color:"blue",name: "shami"},
+        { color: "orange", name: "ravi"},
+        { color: "green", name: "palak"},
+    ];
+    for(var i=0; i < objData.length; i++){
+        let head = document.createElement("h1");
+        head.innerText= objData[i].name;
+        head.style.backgroundColor = objData[i].color;
+        document.querySelector("body").append(head);
+
+
+        
+    }
+</script>

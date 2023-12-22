@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    let even =0;
+    let odd=0;
+    let evensum=0;
+    let oddsum=0;
+    let oddarray=[];
+    let evenarray=[];
+
+
+
+
+    for(i=0; i<num.length; i++){
+        if(num[i]%2===0){
+            even++;
+           evensum = evensum + num[i];
+           evenarray[evenarray.length] = num[i];
+          
+        } 
+        else{
+            odd++;
+            oddsum = oddsum + num[i];
+            oddarray[oddarray.length] = num[i];
+            
+        }
+    }
+
+
+
+
+
+console.log("total odd numbers: ", + odd);
+console.log("total even numbers ", + even);
+console.log("total sum of even numbers ", + evensum);
+console.log("total sum of odd numbers ", +  oddsum);
+
+console.log("total sum of numbers ", + oddsum + evensum);
+// console.log("OddArray", + num[i]);
+console.log("total display even numbers  -  " , evenarray);
+console.log("total display odd numbers  -  " , oddarray);
+
+
+
+</script>

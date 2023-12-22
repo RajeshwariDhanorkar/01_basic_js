@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        border:0;
+      }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+   var btnArr = [
+     { name: "Basic", color: "white", bgcolor: "blue"},
+     { name: "Secondary", color: "white", bgcolor: "gray"},
+     { name: "Primary", color: "white", bgcolor: "red"},
+     { name: "Info", color: "white", bgcolor: "green"},
+     { name: "Static", color: "white", bgcolor: "orange"},
+     { name: "Daynamic", color: "white", bgcolor: "pink"},
+     { name: "Succes", color: "white", bgcolor: "cyan"},
+     { name: "Start", color: "black", bgcolor: "white"},
+   ];
+   for (var i = 0; i < btnArr.length; i++){ 
+        let btn = document.createElement("button");
+        btn.innerText = btnArr[i].name;
+        btn.style.backgroundColor = btnArr[i].bgColor;
+        btn.style.color = btnArr[i].color;
+        document.querySelector("body").append(btn);
+
+         
+
+    }
+</script>

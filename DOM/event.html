@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myFun()">Click here</button>
+    <button id="eventbtn">Click 2</button>
+</body>
+    <script>
+        function myFun()
+        {
+            alert("Hello")
+        }
+        function myFun2()
+        {
+            alert("World")
+        }
+        document.getElementById('eventbtn').addEventListener("click",myFun2)
+    </script>
+</html>

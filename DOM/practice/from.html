@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter name" id="name">
+    <input type="number" placeholder="Enter Mobail" id="mobail">
+    <input type="submit" value="login">
+    <!-- <button>Submit</button> -->
+
+</body>
+</html>
+<script>
+    //froms
+
+    document.querySelector("form").addEventListener("submit ",myFunction)
+    function myfunction(){
+        let username= document.querySelector("#name").value;
+        let mobailnum= document.querySelector("#mobail").value;
+        
+        console.log(username,mobailnum);
+    }
+</script>
